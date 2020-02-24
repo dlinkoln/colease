@@ -1,0 +1,195 @@
+@import 'var.sass'
+@import 'mixins.sass'
+@import 'mobile.sass'
+
+h1
+    font-size: 25px
+    font-family: roboto
+    color: $h1c
+body
+    background: $mbg
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+table
+    border-collapse: collapse
+    
+  
+::placeholder
+    color: $dark
+    font-size: 14px
+    opacity: 1
+.rr
+    font-family: roboto
+    font-weight: normal
+.rb
+    font-family: roboto
+    font-weight: bold
+.fs14
+    font-size: 14px
+.fz20
+    font-size: 20px
+
+.container_c
+    max-width: 1300px
+    display: block
+    margin: 0 auto
+    *
+        box-sizing: border-box
+//Select block
+.main
+    margin-top: 30px
+.select
+    padding-top: 100px
+    background: #fff
+    border-radius: 25px
+    padding: 105px 25px 50px
+.select__title
+    margin-bottom: 8px
+    span
+        margin-left: 10px
+        color: $dark
+        font-size: 12px
+.select__search
+    display: flex
+    position: relative
+    input
+        width: 100%
+        border-radius: 10px
+        border: 1px solid $grayHighlight
+        height: 40px
+        background: transparent
+        padding-left: 20px
+        font-family: roboto
+        font-size: 14px
+        color: #575757
+    input:focus + .select__go
+        border-color: $aqua
+    input:focus
+        border-color: $aqua
+    input:focus::placeholder
+        color: $aqua
+    .select__go
+        display: flex
+        align-items: center
+        justify-content: center
+        position: absolute
+        width: 40px 
+        height: 40px
+        right: 0
+        border-left: 1px solid $grayHighlight
+        .select__search_ico
+            display: flex
+            align-items: center
+        svg
+            cursor: pointer
+//Table block
+.table-box
+    margin-top: 30px
+.tabs__el
+    display: flex
+    justify-content: space-between
+    border-top-left-radius: 15px
+    border-top-right-radius: 15px
+    margin-right: 6px
+    position: relative
+    padding: 17.5px
+    background: #fff
+    box-shadow: inset 0px -2px 1px 0px rgba(153,142,153,0.14)
+    cursor: pointer
+    .tabs__title
+        color: $aqua
+        height: 42px
+        margin-left: 20px
+    span
+        color: $aqua
+        display: block
+        margin-bottom: 3px
+    path
+        color: #fff
+.tabs
+    display: flex
+    padding-left: 36px
+.tabs__el_active:after
+    display: flex
+    justify-content: center
+    position: absolute
+    content: ''
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 19.27px 23px 0 23px
+    border-color: $aqua transparent transparent transparent
+    bottom: 0
+    padding: 0
+    left: 50%
+    margin-left: -23px
+    margin-bottom: -18.27px
+    z-index: 2
+.tabs__el_active
+    background: $aqua
+    box-shadow: none
+    .tabs__title
+        color: #fff
+    span
+        color: #fff
+    path
+        stroke: #fff
+thead
+    width: 100%
+    background: linear-gradient(to top right, $lg, $aqua)
+    height: 50px
+    th:last-child
+        text-align: center
+.table
+    padding-top: 46px
+    background: #fff
+    border-top-left-radius: 25px
+    border-top-right-radius: 25px
+table
+    width: 100%
+th
+    vertical-align: middle
+    color: #fff
+    font-family: roboto
+    font-weight: bold
+    text-align: left
+    &:first-child
+        padding-left: 32px
+    &:last-child
+        padding-right: 32px
+td
+    height: 50px
+    vertical-align: middle
+    text-align: left
+    color: $dark
+    font-family: roboto
+    font-size: 13px
+    border-bottom: 1px solid  #F0F0F0
+    &:first-child
+        border-bottom: none
+    &:last-child
+        border-bottom: none
+.flex-icon
+    display: flex
+    justify-content: space-around
+.flex-icon
+    svg
+        width: 24px
+        height: 24px
+        &:first-child
+            margin-left: 0
+.special__cell
+    color: $aqua
+    text-decoration: underline
+    font-weight: 500
+
+.text-center_c
+    text-align: center
+tr:last-child
+    td
+        border-bottom: none
